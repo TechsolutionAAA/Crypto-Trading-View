@@ -27,14 +27,16 @@ export default function Header() {
             </div>
             {
                 show ?
-                    <div className="navbar1 z-20 absolute top-[30%] min-w-[200px] right-0">
-                        <ul>
-                            <li><a className="text-white no-underline" href="#home">Home</a></li>
-                            <li><a className="text-white no-underline" href="#indicators">Indicators</a></li>
-                            <li><a className="text-white no-underline" href="#features">Features</a></li>
-                            <li><a className="text-white no-underline" href="#pricing">Pricing</a></li>
-                            <li><a className="text-white no-underline" href="#Ffag">FAG</a></li>
-                        </ul>
+                    <div className="absolute w-screen h-screen" onClick={() => setShow(false)}>
+                        <div className="navbar1 z-20 absolute -top-[7%] min-w-[200px] right-0">
+                            <ul>
+                                <li><a className="text-white no-underline" href="#home">Home</a></li>
+                                <li><a className="text-white no-underline" href="#indicators">Indicators</a></li>
+                                <li><a className="text-white no-underline" href="#features">Features</a></li>
+                                <li><a className="text-white no-underline" href="#pricing">Pricing</a></li>
+                                <li><a className="text-white no-underline" href="#Ffag">FAG</a></li>
+                            </ul>
+                        </div>
                     </div>
                     : <></>
             }

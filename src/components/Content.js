@@ -3,22 +3,33 @@ import { Typewriter } from 'react-simple-typewriter'
 import Accordion from './Accordion';
 
 export default function Content() {
+    const handleType = (count) => {
+        // access word count number
+        console.log(count)
+    }
+
+    const handleDone = () => {
+        console.log(`Done after 5 loops!`)
+    }
     return (
         <div>
             <div id='home' className="home mt-[2%] pt-[6%] pb-[5%] pl-[10%] bg-[#02121d] flex md:flex-col">
                 <div className="w-[50%] pl-[10px] pr-[10px] md:w-full">
-                    {/* <Typewriter
-                        words={['Eat', 'Sleep', 'Code', 'Repeat!']}
-                        loop={5}
-                        cursor
-                        cursorStyle='_'
-                        typeSpeed={70}
-                        deleteSpeed={50}
-                        delaySpeed={1000}
-                        onLoopDone={handleDone}
-                        onType={handleType}
-                    /> */}
-                    <h1 className="border-[1px] border-transparent text-white text-[350%] font-bold uppercase leading-[44px] mb-[10px]">we help you <span className='text-[#0000FF]'>trade</span></h1>
+                    <h1 className="border-[1px] border-transparent text-white text-[350%] font-bold uppercase leading-[44px] mb-[10px]">we help you&nbsp;
+                        <span className='text-[#0000FF]'>
+                            <Typewriter
+                                words={['trade', 'profit', 'invest']}
+                                loop={5}
+                                cursor
+                                cursorStyle=''
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                                onLoopDone={handleDone}
+                                onType={handleType}
+                            />
+                        </span>
+                    </h1>
                     <p className='pt-[6%] pr-[14%] text-white text-[140%] leading-[30px] mb-[10px]'>Maximize your odds with the right trading tools. We offer indicators and solutions to improve the trading experience.</p>
                     <div className='mt-[27px] p-[2%] rounded-[20px] bg-[#0000FF] text-white text-base leading-[16px] font-[700] hover:scale-125 ease duration-300 cursor-pointer w-fit'>
                         <a>Start Today!</a>
